@@ -16,6 +16,8 @@ public class mainJF extends javax.swing.JFrame {
     public double primerNum;
     public double segundoNum;
     public String operacion;
+    public boolean numOperado;
+    public boolean sucecionOperacion;
     
     /**
      * Creates new form mainJF
@@ -56,145 +58,199 @@ public class mainJF extends javax.swing.JFrame {
         btIgual = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 0));
 
         labelResultado.setBackground(new java.awt.Color(0, 0, 0));
-        labelResultado.setFont(new java.awt.Font("Arial", 0, 48)); // NOI18N
+        labelResultado.setFont(new java.awt.Font("Arial", 0, 60)); // NOI18N
         labelResultado.setForeground(new java.awt.Color(255, 255, 255));
         labelResultado.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         labelResultado.setText("0");
         labelResultado.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        labelResultado.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         labelResultado.setOpaque(true);
 
+        btSuma.setBackground(new java.awt.Color(253, 149, 0));
+        btSuma.setForeground(new java.awt.Color(255, 255, 255));
         btSuma.setText("+");
+        btSuma.setBorderPainted(false);
         btSuma.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btSumaActionPerformed(evt);
             }
         });
 
+        bt3.setBackground(new java.awt.Color(51, 51, 51));
+        bt3.setForeground(new java.awt.Color(255, 255, 255));
         bt3.setText("3");
+        bt3.setBorderPainted(false);
         bt3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bt3ActionPerformed(evt);
             }
         });
 
+        bt2.setBackground(new java.awt.Color(51, 51, 51));
+        bt2.setForeground(new java.awt.Color(255, 255, 255));
         bt2.setText("2");
+        bt2.setBorderPainted(false);
         bt2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bt2ActionPerformed(evt);
             }
         });
 
+        bt1.setBackground(new java.awt.Color(51, 51, 51));
+        bt1.setForeground(new java.awt.Color(255, 255, 255));
         bt1.setText("1");
+        bt1.setBorderPainted(false);
         bt1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bt1ActionPerformed(evt);
             }
         });
 
+        bt4.setBackground(new java.awt.Color(51, 51, 51));
+        bt4.setForeground(new java.awt.Color(255, 255, 255));
         bt4.setText("4");
+        bt4.setBorderPainted(false);
         bt4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bt4ActionPerformed(evt);
             }
         });
 
+        bt5.setBackground(new java.awt.Color(51, 51, 51));
+        bt5.setForeground(new java.awt.Color(255, 255, 255));
         bt5.setText("5");
+        bt5.setBorderPainted(false);
         bt5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bt5ActionPerformed(evt);
             }
         });
 
+        bt6.setBackground(new java.awt.Color(51, 51, 51));
+        bt6.setForeground(new java.awt.Color(255, 255, 255));
         bt6.setText("6");
+        bt6.setBorderPainted(false);
         bt6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bt6ActionPerformed(evt);
             }
         });
 
+        btResta.setBackground(new java.awt.Color(253, 149, 0));
+        btResta.setForeground(new java.awt.Color(255, 255, 255));
         btResta.setText("-");
+        btResta.setBorderPainted(false);
         btResta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btRestaActionPerformed(evt);
             }
         });
 
+        btMult.setBackground(new java.awt.Color(253, 149, 0));
+        btMult.setForeground(new java.awt.Color(255, 255, 255));
         btMult.setText("*");
+        btMult.setBorderPainted(false);
         btMult.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btMultActionPerformed(evt);
             }
         });
 
+        bt9.setBackground(new java.awt.Color(51, 51, 51));
+        bt9.setForeground(new java.awt.Color(255, 255, 255));
         bt9.setText("9");
+        bt9.setBorderPainted(false);
         bt9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bt9ActionPerformed(evt);
             }
         });
 
+        bt8.setBackground(new java.awt.Color(51, 51, 51));
+        bt8.setForeground(new java.awt.Color(255, 255, 255));
         bt8.setText("8");
+        bt8.setBorderPainted(false);
         bt8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bt8ActionPerformed(evt);
             }
         });
 
+        bt7.setBackground(new java.awt.Color(51, 51, 51));
+        bt7.setForeground(new java.awt.Color(255, 255, 255));
         bt7.setText("7");
+        bt7.setBorderPainted(false);
         bt7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bt7ActionPerformed(evt);
             }
         });
 
+        btClean.setBackground(new java.awt.Color(165, 165, 165));
         btClean.setText("AC");
+        btClean.setBorderPainted(false);
         btClean.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btCleanActionPerformed(evt);
             }
         });
 
+        btNega.setBackground(new java.awt.Color(165, 165, 165));
         btNega.setText("+/-");
+        btNega.setBorderPainted(false);
         btNega.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btNegaActionPerformed(evt);
             }
         });
 
+        btPorcen.setBackground(new java.awt.Color(165, 165, 165));
         btPorcen.setText("%");
+        btPorcen.setBorderPainted(false);
         btPorcen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btPorcenActionPerformed(evt);
             }
         });
 
+        btDiv.setBackground(new java.awt.Color(253, 149, 0));
+        btDiv.setForeground(new java.awt.Color(255, 255, 255));
         btDiv.setText("/");
+        btDiv.setBorderPainted(false);
         btDiv.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btDivActionPerformed(evt);
             }
         });
 
+        bt0.setBackground(new java.awt.Color(51, 51, 51));
+        bt0.setForeground(new java.awt.Color(255, 255, 255));
         bt0.setText("0");
+        bt0.setBorderPainted(false);
         bt0.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bt0ActionPerformed(evt);
             }
         });
 
+        btComa.setBackground(new java.awt.Color(51, 51, 51));
+        btComa.setForeground(new java.awt.Color(255, 255, 255));
         btComa.setText(",");
+        btComa.setBorderPainted(false);
         btComa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btComaActionPerformed(evt);
             }
         });
 
+        btIgual.setBackground(new java.awt.Color(253, 149, 0));
+        btIgual.setForeground(new java.awt.Color(255, 255, 255));
         btIgual.setText("=");
+        btIgual.setBorderPainted(false);
         btIgual.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btIgualActionPerformed(evt);
@@ -310,101 +366,112 @@ public class mainJF extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void bt0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt0ActionPerformed
-        if (!this.labelResultado.getText().equals("0") && this.segundoNum!=-1){
+        if (!this.labelResultado.getText().equals("0") && this.segundoNum!=-1 && !this.numOperado){
             this.labelResultado.setText(this.labelResultado.getText()+"0");
         } else {
             this.labelResultado.setText("0");
             this.segundoNum = 0;
+            this.numOperado = false;
         }
     }//GEN-LAST:event_bt0ActionPerformed
 
     private void btComaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btComaActionPerformed
-        if(!this.labelResultado.getText().contains(".") && this.segundoNum!=-1){
+        if(!this.labelResultado.getText().contains(".") && this.segundoNum!=-1 && !this.numOperado){
             this.labelResultado.setText(this.labelResultado.getText()+".");
         } else {
             this.labelResultado.setText("0.");
             this.segundoNum = 0;
+            this.numOperado = false;
         }
     }//GEN-LAST:event_btComaActionPerformed
 
     private void bt1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt1ActionPerformed
-        if (!this.labelResultado.getText().equals("0") && this.segundoNum!=-1){
+        if (!this.labelResultado.getText().equals("0") && this.segundoNum!=-1 && !this.numOperado){
             this.labelResultado.setText(this.labelResultado.getText()+"1");
         } else {
             this.labelResultado.setText("1");
             this.segundoNum = 0;
+            this.numOperado = false;
         }
     }//GEN-LAST:event_bt1ActionPerformed
 
     private void bt2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt2ActionPerformed
-        if (!this.labelResultado.getText().equals("0") && this.segundoNum!=-1){
+        if (!this.labelResultado.getText().equals("0") && this.segundoNum!=-1 && !this.numOperado){
             this.labelResultado.setText(this.labelResultado.getText()+"2");
         } else {
             this.labelResultado.setText("2");
             this.segundoNum = 0;
+            this.numOperado = false;
         }
     }//GEN-LAST:event_bt2ActionPerformed
 
     private void bt3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt3ActionPerformed
-        if (!this.labelResultado.getText().equals("0") && this.segundoNum!=-1){
+        if (!this.labelResultado.getText().equals("0") && this.segundoNum!=-1 && !this.numOperado){
             this.labelResultado.setText(this.labelResultado.getText()+"3");
         } else {
             this.labelResultado.setText("3");
             this.segundoNum = 0;
+            this.numOperado = false;
         }
     }//GEN-LAST:event_bt3ActionPerformed
 
     private void bt4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt4ActionPerformed
-        if (!this.labelResultado.getText().equals("0") && this.segundoNum!=-1){
+        if (!this.labelResultado.getText().equals("0") && this.segundoNum!=-1 && !this.numOperado){
             this.labelResultado.setText(this.labelResultado.getText()+"4");
         } else {
             this.labelResultado.setText("4");
             this.segundoNum = 0;
+            this.numOperado = false;
         }
     }//GEN-LAST:event_bt4ActionPerformed
 
     private void bt5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt5ActionPerformed
-        if (!this.labelResultado.getText().equals("0") && this.segundoNum!=-1){
+        if (!this.labelResultado.getText().equals("0") && this.segundoNum!=-1 && !this.numOperado){
             this.labelResultado.setText(this.labelResultado.getText()+"5");
         } else {
             this.labelResultado.setText("5");
             this.segundoNum = 0;
+            this.numOperado = false;
         }
     }//GEN-LAST:event_bt5ActionPerformed
 
     private void bt6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt6ActionPerformed
-        if (!this.labelResultado.getText().equals("0") && this.segundoNum!=-1){
+        if (!this.labelResultado.getText().equals("0") && this.segundoNum!=-1 && !this.numOperado){
             this.labelResultado.setText(this.labelResultado.getText()+"6");
         } else {
             this.labelResultado.setText("6");
             this.segundoNum = 0;
+            this.numOperado = false;
         }
     }//GEN-LAST:event_bt6ActionPerformed
 
     private void bt7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt7ActionPerformed
-        if (!this.labelResultado.getText().equals("0") && this.segundoNum!=-1){
+        if (!this.labelResultado.getText().equals("0") && this.segundoNum!=-1 && !this.numOperado){
             this.labelResultado.setText(this.labelResultado.getText()+"7");
         } else {
             this.labelResultado.setText("7");
             this.segundoNum = 0;
+            this.numOperado = false;
         }
     }//GEN-LAST:event_bt7ActionPerformed
 
     private void bt8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt8ActionPerformed
-        if (!this.labelResultado.getText().equals("0") && this.segundoNum!=-1){
+        if (!this.labelResultado.getText().equals("0") && this.segundoNum!=-1 && !this.numOperado){
             this.labelResultado.setText(this.labelResultado.getText()+"8");
         } else {
             this.labelResultado.setText("8");
             this.segundoNum = 0;
+            this.numOperado = false;
         }
     }//GEN-LAST:event_bt8ActionPerformed
 
     private void bt9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt9ActionPerformed
-        if (!this.labelResultado.getText().equals("0") && this.segundoNum!=-1){
+        if (!this.labelResultado.getText().equals("0") && this.segundoNum!=-1 && !this.numOperado){
             this.labelResultado.setText(this.labelResultado.getText()+"9");
         } else {
             this.labelResultado.setText("9");
             this.segundoNum = 0;
+            this.numOperado = false;
         }
     }//GEN-LAST:event_bt9ActionPerformed
 
@@ -413,9 +480,15 @@ public class mainJF extends javax.swing.JFrame {
     }//GEN-LAST:event_btCleanActionPerformed
 
     private void btSumaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSumaActionPerformed
-        this.primerNum = parseDouble(this.labelResultado.getText());
+        if(sucecionOperacion){
+            this.primerNum = operatoriaAnteriorParaSucesiones(operacion);
+            this.labelResultado.setText(borrarComaCero(this.primerNum));
+        }else{
+            this.primerNum = parseDouble(this.labelResultado.getText());
+        }
         this.operacion = "+";
-        this.labelResultado.setText(""); // eventualmente en la calc de iphone no se borra y luego al apretar otro num se borrar, OJO
+        this.numOperado = true;
+        this.sucecionOperacion = true;
     }//GEN-LAST:event_btSumaActionPerformed
 
     private String borrarComaCero(double num){
@@ -432,14 +505,17 @@ public class mainJF extends javax.swing.JFrame {
             case "+":
                 this.labelResultado.setText(borrarComaCero(segundoNum+primerNum));
                 this.segundoNum = -1;
+                this.sucecionOperacion = false;
                 break;
             case "-":
                 this.labelResultado.setText(borrarComaCero(primerNum-segundoNum));
                 this.segundoNum = -1;
+                this.sucecionOperacion = false;
                 break;
             case "*":
                 this.labelResultado.setText(borrarComaCero(primerNum*segundoNum));
                 this.segundoNum = -1;
+                this.sucecionOperacion = false;
                 break;
             case "/":
                 if (this.segundoNum == 0){
@@ -448,31 +524,60 @@ public class mainJF extends javax.swing.JFrame {
                     this.labelResultado.setText(borrarComaCero(primerNum/segundoNum));
                 }
                 this.segundoNum = -1;
+                this.sucecionOperacion = false;
                 break;
         }
     }//GEN-LAST:event_btIgualActionPerformed
 
+    private double operatoriaAnteriorParaSucesiones(String operador){
+        switch (operador){
+            case "+": this.primerNum = (this.primerNum + parseDouble(this.labelResultado.getText())); break;
+            case "-": this.primerNum = (this.primerNum - parseDouble(this.labelResultado.getText())); break;
+            case "*": this.primerNum = (this.primerNum * parseDouble(this.labelResultado.getText())); break;
+            case "/": this.primerNum = (this.primerNum / parseDouble(this.labelResultado.getText())); break;
+        }
+        return this.primerNum;
+    }
+    
     private void btRestaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btRestaActionPerformed
-        this.primerNum = parseDouble(this.labelResultado.getText());
+        if(sucecionOperacion){
+            this.primerNum = operatoriaAnteriorParaSucesiones(operacion);
+            this.labelResultado.setText(borrarComaCero(this.primerNum));
+        }else{
+            this.primerNum = parseDouble(this.labelResultado.getText());
+        }
         this.operacion = "-";
-        this.labelResultado.setText("");
+        this.numOperado = true;
+        this.sucecionOperacion = true;
     }//GEN-LAST:event_btRestaActionPerformed
 
     private void btMultActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMultActionPerformed
-        this.primerNum = parseDouble(this.labelResultado.getText());
+        if(sucecionOperacion){
+            this.primerNum = operatoriaAnteriorParaSucesiones(operacion);
+            this.labelResultado.setText(borrarComaCero(this.primerNum));
+        }else{
+            this.primerNum = parseDouble(this.labelResultado.getText());
+        }
         this.operacion = "*";
-        this.labelResultado.setText("");
+        this.numOperado = true;
+        this.sucecionOperacion = true;
     }//GEN-LAST:event_btMultActionPerformed
 
     private void btDivActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btDivActionPerformed
-        this.primerNum = parseDouble(this.labelResultado.getText());
+        if(sucecionOperacion){
+            this.primerNum = operatoriaAnteriorParaSucesiones(operacion);
+            this.labelResultado.setText(borrarComaCero(this.primerNum));
+        }else{
+            this.primerNum = parseDouble(this.labelResultado.getText());
+        }
         this.operacion = "/";
-        this.labelResultado.setText("");
+        this.numOperado = true;
+        this.sucecionOperacion = true;
     }//GEN-LAST:event_btDivActionPerformed
 
     private void btNegaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btNegaActionPerformed
         this.primerNum = ((-1) * parseDouble(this.labelResultado.getText())); // mult por -1 (cambio signo)
-        this.labelResultado.setText(""+primerNum);
+        this.labelResultado.setText(borrarComaCero(primerNum));
     }//GEN-LAST:event_btNegaActionPerformed
 
     private void btPorcenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPorcenActionPerformed
