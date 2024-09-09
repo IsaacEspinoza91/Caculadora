@@ -60,9 +60,10 @@ public class mainJF extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(0, 0, 0));
 
         labelResultado.setBackground(new java.awt.Color(0, 0, 0));
-        labelResultado.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        labelResultado.setFont(new java.awt.Font("Arial", 0, 48)); // NOI18N
         labelResultado.setForeground(new java.awt.Color(255, 255, 255));
         labelResultado.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        labelResultado.setText("0");
         labelResultado.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         labelResultado.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         labelResultado.setOpaque(true);
@@ -309,49 +310,102 @@ public class mainJF extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void bt0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt0ActionPerformed
-        this.labelResultado.setText(this.labelResultado.getText()+"0");
+        if (!this.labelResultado.getText().equals("0") && this.segundoNum!=-1){
+            this.labelResultado.setText(this.labelResultado.getText()+"0");
+        } else {
+            this.labelResultado.setText("0");
+            this.segundoNum = 0;
+        }
     }//GEN-LAST:event_bt0ActionPerformed
 
     private void btComaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btComaActionPerformed
-        if(!this.labelResultado.getText().contains(".")){
+        if(!this.labelResultado.getText().contains(".") && this.segundoNum!=-1){
             this.labelResultado.setText(this.labelResultado.getText()+".");
+        } else {
+            this.labelResultado.setText("0.");
+            this.segundoNum = 0;
         }
     }//GEN-LAST:event_btComaActionPerformed
 
     private void bt1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt1ActionPerformed
-        this.labelResultado.setText(this.labelResultado.getText()+"1");
+        if (!this.labelResultado.getText().equals("0") && this.segundoNum!=-1){
+            this.labelResultado.setText(this.labelResultado.getText()+"1");
+        } else {
+            this.labelResultado.setText("1");
+            this.segundoNum = 0;
+        }
     }//GEN-LAST:event_bt1ActionPerformed
 
     private void bt2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt2ActionPerformed
-        this.labelResultado.setText(this.labelResultado.getText()+"2");
+        if (!this.labelResultado.getText().equals("0") && this.segundoNum!=-1){
+            this.labelResultado.setText(this.labelResultado.getText()+"2");
+        } else {
+            this.labelResultado.setText("2");
+            this.segundoNum = 0;
+        }
     }//GEN-LAST:event_bt2ActionPerformed
 
     private void bt3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt3ActionPerformed
-        this.labelResultado.setText(this.labelResultado.getText()+"3");
+        if (!this.labelResultado.getText().equals("0") && this.segundoNum!=-1){
+            this.labelResultado.setText(this.labelResultado.getText()+"3");
+        } else {
+            this.labelResultado.setText("3");
+            this.segundoNum = 0;
+        }
     }//GEN-LAST:event_bt3ActionPerformed
 
     private void bt4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt4ActionPerformed
-        this.labelResultado.setText(this.labelResultado.getText()+"4");
+        if (!this.labelResultado.getText().equals("0") && this.segundoNum!=-1){
+            this.labelResultado.setText(this.labelResultado.getText()+"4");
+        } else {
+            this.labelResultado.setText("4");
+            this.segundoNum = 0;
+        }
     }//GEN-LAST:event_bt4ActionPerformed
 
     private void bt5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt5ActionPerformed
-        this.labelResultado.setText(this.labelResultado.getText()+"5");
+        if (!this.labelResultado.getText().equals("0") && this.segundoNum!=-1){
+            this.labelResultado.setText(this.labelResultado.getText()+"5");
+        } else {
+            this.labelResultado.setText("5");
+            this.segundoNum = 0;
+        }
     }//GEN-LAST:event_bt5ActionPerformed
 
     private void bt6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt6ActionPerformed
-        this.labelResultado.setText(this.labelResultado.getText()+"6");
+        if (!this.labelResultado.getText().equals("0") && this.segundoNum!=-1){
+            this.labelResultado.setText(this.labelResultado.getText()+"6");
+        } else {
+            this.labelResultado.setText("6");
+            this.segundoNum = 0;
+        }
     }//GEN-LAST:event_bt6ActionPerformed
 
     private void bt7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt7ActionPerformed
-        this.labelResultado.setText(this.labelResultado.getText()+"7");
+        if (!this.labelResultado.getText().equals("0") && this.segundoNum!=-1){
+            this.labelResultado.setText(this.labelResultado.getText()+"7");
+        } else {
+            this.labelResultado.setText("7");
+            this.segundoNum = 0;
+        }
     }//GEN-LAST:event_bt7ActionPerformed
 
     private void bt8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt8ActionPerformed
-        this.labelResultado.setText(this.labelResultado.getText()+"8");
+        if (!this.labelResultado.getText().equals("0") && this.segundoNum!=-1){
+            this.labelResultado.setText(this.labelResultado.getText()+"8");
+        } else {
+            this.labelResultado.setText("8");
+            this.segundoNum = 0;
+        }
     }//GEN-LAST:event_bt8ActionPerformed
 
     private void bt9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt9ActionPerformed
-        this.labelResultado.setText(this.labelResultado.getText()+"9");
+        if (!this.labelResultado.getText().equals("0") && this.segundoNum!=-1){
+            this.labelResultado.setText(this.labelResultado.getText()+"9");
+        } else {
+            this.labelResultado.setText("9");
+            this.segundoNum = 0;
+        }
     }//GEN-LAST:event_bt9ActionPerformed
 
     private void btCleanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btCleanActionPerformed
@@ -364,20 +418,36 @@ public class mainJF extends javax.swing.JFrame {
         this.labelResultado.setText(""); // eventualmente en la calc de iphone no se borra y luego al apretar otro num se borrar, OJO
     }//GEN-LAST:event_btSumaActionPerformed
 
+    private String borrarComaCero(double num){
+        String resul = Double.toString(num);
+        if(num%1==0){ // en el caso en que sea cero, significa que el num es XX.0
+            resul = resul.substring(0, resul.length()-2); // borro ultimos dos caracteres X.0
+        }
+        return resul;
+    }
+    
     private void btIgualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btIgualActionPerformed
         this.segundoNum = parseDouble(this.labelResultado.getText());
         switch (this.operacion){
             case "+":
-                this.labelResultado.setText(Double.toString(segundoNum+primerNum));
+                this.labelResultado.setText(borrarComaCero(segundoNum+primerNum));
+                this.segundoNum = -1;
                 break;
             case "-":
-                this.labelResultado.setText(""+(primerNum-segundoNum)); //tambien se puede concatenar asi
+                this.labelResultado.setText(borrarComaCero(primerNum-segundoNum));
+                this.segundoNum = -1;
                 break;
             case "*":
-                this.labelResultado.setText(Double.toString(primerNum*segundoNum));
+                this.labelResultado.setText(borrarComaCero(primerNum*segundoNum));
+                this.segundoNum = -1;
                 break;
             case "/":
-                this.labelResultado.setText(Double.toString(primerNum/segundoNum));
+                if (this.segundoNum == 0){
+                    this.labelResultado.setText("Error");
+                }else{
+                    this.labelResultado.setText(borrarComaCero(primerNum/segundoNum));
+                }
+                this.segundoNum = -1;
                 break;
         }
     }//GEN-LAST:event_btIgualActionPerformed
